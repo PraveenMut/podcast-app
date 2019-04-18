@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/podcasts/:id', to: 'podcasts#show', as: 'podcast'
   get '/podcasts/:id/edit', to: 'podcasts#edit', as: 'edit_podcast'
   put '/podcasts/:id', to: 'podcasts#update'
+  post '/episodes', to: 'eposide#create'
   delete '/podcasts/:id', to: 'podcasts#destroy' 
 end
