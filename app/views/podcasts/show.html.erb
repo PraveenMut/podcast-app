@@ -1,1 +1,19 @@
-<h1>Podcast Details</h1>
+<div>
+  <h1> <%= @podcast.name %> </h1>
+  <h2> <%= %> Podcast Genre: <%= @podcast.genre %></h2>
+  <p>Has Explicit Content? <%= @podcast.explicit_content %> </p>
+  <small> Date Created: <%= @podcast.created_at %></small>
+  <br />
+  <br />
+  <br />
+</div>
+<div>
+  <h3>Podcast Episodes</h3>
+  <ul>
+    <% @episode_podcast.each do |episode| %>
+    <li><%= link_to episode.title, '#' %> </li>
+    <% end %>
+  </ul>
+</div>
+<div>
+<%= link_to '< Back', podcasts_path %>

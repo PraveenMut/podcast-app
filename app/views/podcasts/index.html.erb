@@ -1,1 +1,9 @@
 <h1>The Podcast Oracle</h1>
+<div>
+<% @podcasts.each do |podcast| %>
+<h2> <%= podcast.name  %> </h2>
+<p> <%= podcast.genre %> </p>
+<p> Has Explicit Content? <%= podcast.explicit_content %> </p>
+<p> <%= link_to 'Show Podcast', podcast_path(podcast), :target => "_blank" %> </p>
+<% end %>
+</div>
